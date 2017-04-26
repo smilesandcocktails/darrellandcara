@@ -12,6 +12,7 @@ describe Robot do
     it 'should create new robot name' do
       expect(@robot1.name.length).not_to eq(0)
     end
+
     it 'is an instance of Robot class' do
       expect(@robot1).to be_instance_of(Robot)
     end
@@ -31,5 +32,13 @@ describe Robot do
       @robot1.reset
       expect(@robot1.name).not_to eq(original_name)
     end
+  end
+
+  describe 'Test Name' do
+    it 'name should consists 2 alphabets and 3 numbers' do
+      @robot3 = Robot.new ('ABCDEF')
+      expect(@robot3.name).not_to eq('ABCDEF')
+    end
+
   end
 end
