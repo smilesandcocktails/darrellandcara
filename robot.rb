@@ -16,9 +16,3 @@ class Robot
     @name = letter + num
   end
 end
-
-robot1 = Robot.new
-original_name = robot1.name
-robot1.reset
-p original_name
-p robot1.name
