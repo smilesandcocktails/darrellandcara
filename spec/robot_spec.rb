@@ -36,9 +36,13 @@ describe Robot do
 
   describe 'Test Name' do
     it 'name should consists 2 alphabets and 3 numbers' do
-      @robot3 = Robot.new ('ABCDEF')
-      expect(@robot3.name).not_to eq('ABCDEF')
+      @robot3 = Robot.new ('ABCDE')
+      expect(@robot3.name).not_to eq('ABCDE')
     end
 
+    it 'name should consist of 5 characters' do
+      @robot4 = Robot.new ('ABCDEFGHIJ')
+      expect(@robot4.name.length).not_to eq(10)
+    end
   end
 end
