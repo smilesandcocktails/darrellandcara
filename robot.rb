@@ -13,6 +13,3 @@ end
 
 robot1 = Robot.new
 robot2 = Robot.new
-
-p robot1
-p robot2
