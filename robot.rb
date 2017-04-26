@@ -2,7 +2,13 @@ class Robot
   @@nameArr = []
   attr_accessor :name
   def initialize(name = reset)
-    @name = name
+    if @@nameArr.include? name
+      reset
+      @@nameArr.push(name)
+    else
+      @name = name
+      @@nameArr.push(name)
+    end
   end
   def reset
     letter = (0...2).map { (65 + rand(26)).chr }.join
@@ -11,8 +17,8 @@ class Robot
   end
 end
 
-robot1 = Robot.new
-robot2 = Robot.new
-
-p robot1
-p robot2
+# robot1 = Robot.new
+# robot2 = Robot.new
+#
+# p robot1
+# p robot2
