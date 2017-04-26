@@ -25,5 +25,11 @@ describe Robot do
     it 'Robot 2 should get a random name' do
       expect(@robot2.name).not_to eql(@robot1.name)
     end
+
+    it 'Robot.reset function works' do
+      original_name = @robot1.name
+      @robot1.reset
+      expect(@robot1.name).not_to eq(original_name)
+    end
   end
 end
