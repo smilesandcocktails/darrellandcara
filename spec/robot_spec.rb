@@ -37,7 +37,8 @@ describe Robot do
   describe 'Test Name' do
     it 'name should consists 2 alphabets and 3 numbers' do
       @robot3 = Robot.new('ABCDE')
-      expect(@robot3.name).not_to eq('ABCDE')
+      # expect(@robot3.name).not_to eq('ABCDE')
+      expect(@robot3.name).to match(/^[A-Z]{2}\d{3}$/)
     end
 
     it 'name should consists 2 alphabets and 3 numbers' do
